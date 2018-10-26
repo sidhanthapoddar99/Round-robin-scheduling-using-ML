@@ -1,0 +1,1 @@
+to run this project you forst have to run the python script then the c++ script
