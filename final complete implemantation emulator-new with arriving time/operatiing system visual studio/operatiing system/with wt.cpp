@@ -71,7 +71,7 @@ int wating_time2(int arr[], int TQ ,int &tt,int &p,int at[],int bt[])
 						arr[0] = bt[p];						
 						p++;
 						cout << "BREAK CYCLE-----process entered with bt: " << bt[p - 1] << endl;
-						cout << " waiting time for all process: " << ttq * (r_no - c)<<endl;
+						cout << "Waiting time for all process: " << ttq * (r_no - c)<<endl;
 						display1(arr);
 
 
@@ -129,7 +129,7 @@ int wating_time2(int arr[], int TQ ,int &tt,int &p,int at[],int bt[])
 
 				}
 				cout << "CONTINUE CYCLE P"<<i<< "   processed " << endl;
-				cout << " waiting time for all process: " << www << endl;
+				cout << "Waiting time for all process: " << www << endl;
 				display1(arr);
 
 			}
