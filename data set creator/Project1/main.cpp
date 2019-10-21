@@ -163,7 +163,7 @@ int main()
 	for (int i = 0; i < k1; i++)
 		arr5[i] = -1;
 
-	cout << rec2(arr,arr5, wrt);
+	cout << rec2(arr3,arr5, wrt);
 	
 	/*
 	alpha(arr3);
