@@ -2,7 +2,7 @@
 #include<fstream>
 using namespace std;
 
-const int maxx = 7;
+const int maxx = 5;
 int wrt = 1;
 
 void setmax2(int x);
@@ -137,69 +137,42 @@ int main()
 	//int arr[] = { 35,2,37,58,3,43,1,38,137,19 };
 	//int arr[]={0,0,2,6,8,0,0,5,0,0};
 	//int arr[]={0,0,0,0,0,0,0,5,0,0};
-	/*int arr[] = { 215,299,159,55,211 };
-	cout << rec(arr, 1);
-	alpha(arr);
-	cout << rec(arr,1);
-	int arr1[] = { 178,198,29,129,10 };
-	cout << rec(arr1, 1);
-	alpha(arr1);
-	cout << rec(arr1, 1);
-	int arr2[] = { 105,9,13,24,16 };
-	cout << rec(arr2, 1);
-	alpha(arr2);*/
+	//int arr[] = { 215,299,159,55,211 };
+
 	setmax1(maxx);
 	setmax2(maxx);
 	wrt = 0;
 	int arr3[maxx];
+	
+
 	cout << "enter the array to be generated/added :: ";
 	for (int i = 0; i < maxx; i++)
 		cin >> arr3[i];
 	cout << "generate csv?(1/0)";
 	cin >> wrt;
+	
+	//wrt = 1;
+
 	alpha(arr3);
 
+	//this part is for dynamic programming maxi is the max value of the array set entrered 
+	//thus the maximum itterartion value or all the possible stats of the program for which the time quantum can be calculated
+	
 	int k1 = maxi(arr3) + 1;
 	int *arr5=new int[k1];
 	for (int i = 0; i < k1; i++)
 		arr5[i] = -1;
+
+	cout << rec2(arr,arr5, wrt);
 	
+	/*
+	alpha(arr3);
+	for (int i = 0; i < k1; i++)
+		arr5[i] = -1;
 
-	//cout << rec2(arr3,arr5, 0);
-	cout << rec(arr3, 0);
-
-
-	//for (int i = 0; i < k1; i++)
-		//cout << arr5[i] << " ";
-
-	//cout << rec(arr3, 0);
-
-
-
-
-	/*for (int i = 7; i <= 12; i++)
-	{
-		for (int j = 0; j < 5; j++)
-		{
-			if (arr[j] > 0) {
-				arr[j]-=1;
-				cout << rec(arr, 0) / 5;
-
-			}
-			
-
-		}
-	}*/
-	/*for(int j=0;j<maxx;j++)
-	cout<<arr[j]<<"  ";
-	cout<<endl;
-	cout<<"wating time:"<<wating_time(arr,3);
-	cout<<endl;
-	for(int j=0;j<maxx;j++)
-	cout<<arr[j]<<"  ";
-	cout<<endl;*/
-	//cout<<mini(arr);
-	cin.get();
+	cout << rec2(arr3, arr5, 1);
+	*/
+	//cin.get();
 	int zzzx;
 	cin >> zzzx;
 	return 0;
